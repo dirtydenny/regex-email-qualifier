@@ -5,7 +5,24 @@ Have you ever signed up for a website you really didn’t want to signup to with
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In this tutorial, we are going to tell you what that gobbledygook actually means and does.  How it prevents you from just banging out several characters to get by the email requirement of the site you're on. 
+
+Let's take a look at the code and begin to unpack it.
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
++ / are your Boundaries
++ ^ and $ are your Anchors
++ () we use these to set the Groupings
++ [] deliminate the 
+
+
+
+
+
+
+
+
 
 ## Table of Contents
 
@@ -22,20 +39,25 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 
-Anchors are assertions about the engine's current position in the string.  In our email testing regex we are using ^ and $.  The ^ will assert the beginning of the regex and the $ will assert the end.  ^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$
+Anchors are assertions about the engine's current position in the string.  In our email testing regex we are using `^` and `$`.  The ^ will assert the beginning of the regex and the `$` will assert the end.  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`.  Although it is technically a boundary, the forward slash / is used at the beginning and end of the string to denote its beginning and ending.
 
 ### Quantifiers
 
+In our regex, we want to have at least 1 of each character class in groups 0 and 1.  It is the plus sign + at the end but before the group closing parenthesis that makes that happen.  
 ### Grouping Constructs
-()
+
+Within our code snipit we see three instances of grouping where the smaller groups are enclosed in parenthesis ().  Each one of these is assigned a group number starting at zero.  We use the groups to incorporate only the items we require for each unique section we are searching.  When we have multiple groups, we refer to them as subexpressions.
+
 ### Bracket Expressions
-[]
+
+A bracket expression
 ### Character Classes
 
+Character Classes refer to the items seperated within
 ### The OR Operator
 
 ### Flags
-
+{2,6}
 ### Character Escapes
 
 ## Author
