@@ -7,22 +7,26 @@ Have you ever signed up for a website you really didn’t want to signup to with
 
 In this tutorial, we are going to tell you what that gobbledygook actually means and does.  How it prevents you from just banging out several characters to get by the email requirement of the site you're on. 
 
-Let's take a look at the code and begin to unpack it.
+Let's take a quick look at the code and begin to unpack it.
 
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 + / are your Boundaries
 + ^ and $ are your Anchors
 + () we use these to set the Groupings
-+ [] deliminate the 
++ [] deliminate the Bracket Expressions
++ Within the [] you'll have your charcter classes.
++ We use the \ as the Escaping character to print .'s.  
 
+Let's see it inserted into a some JavaScript.
 
+>function validateEmail(email)
+>{  
+>const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+>return regex.test(email);
+>}
 
-
-
-
-
-
+This function will return either a TRUE or FALSE after it uses the TEST method to examine the pattern of the email inputted by the user.
 
 ## Table of Contents
 
@@ -31,8 +35,6 @@ Let's take a look at the code and begin to unpack it.
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
-- [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
@@ -43,7 +45,7 @@ Anchors are assertions about the engine's current position in the string.  In ou
 
 ### Quantifiers
 
-In our regex, we want to have at least 1 of each character class in groups 0 and 1.  It is the plus sign + at the end but before the group closing parenthesis that makes that happen.  
+In our regex, we want to have at least 1 of each character class in groups 0 and 1.  It is the plus sign + after the closing ] at the end but before the group closing parenthesis ) that makes that happen.  
 ### Grouping Constructs
 
 Within our code snipit we see three instances of grouping where the smaller groups are enclosed in parenthesis ().  Each one of these is assigned a group number starting at zero.  We use the groups to incorporate only the items we require for each unique section we are searching.  When we have multiple groups, we refer to them as subexpressions.
@@ -54,12 +56,10 @@ A bracket expression
 ### Character Classes
 
 Character Classes refer to the items seperated within
-### The OR Operator
-
 ### Flags
 {2,6}
 ### Character Escapes
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+After running a successful E-Commerce platform for several years. 
