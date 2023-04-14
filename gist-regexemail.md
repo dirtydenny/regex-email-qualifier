@@ -48,11 +48,13 @@ Anchors are assertions about the engine's current position in the string.  In ou
 In our regex, we want to have at least 1 of each character class in groups 0 and 1.  It is the plus sign + after the closing ] at the end but before the group closing parenthesis ) that makes that happen.  
 ### Grouping Constructs
 
-Within our code snipit we see three instances of grouping where the smaller groups are enclosed in parenthesis ().  Each one of these is assigned a group number starting at zero.  We use the groups to incorporate only the items we require for each unique section we are searching.  When we have multiple groups, we refer to them as subexpressions.
+Within our code snippit we see three instances of grouping where the smaller groups are enclosed in parenthesis ().  Each one of these is assigned a group number starting at zero.  We use the groups to incorporate only the items we require for each unique section we are searching.  When we have multiple groups, we refer to them as subexpressions.
 
 ### Bracket Expressions
 
-A bracket expression
+Brackets [ ] designate a set of charcters to match. In our example, we see three sets of search criteria in brackets.  We can also tell it not to find these same items by writing the search by using the ^ to begin the string (/[^a-z]/) telling it not to find lowercase letters from a to z.   
+
+See the carcter classes to see how they are used.
 ### Character Classes
 
 Character Classes refer to the items seperated within the brackets [].  Let's look at each one in our example.
@@ -67,10 +69,10 @@ We have a few examples of escaped characters in our example:
 + \d: matches any digit character, equivalent to the character class [0-9].
 + `\.`: matches a literal dot character.
 
-Both character escapes are used inside square brackets ([]) to create character classes that match specific sets of characters. \d is used in the character class [\da-z\.-] to match digits, and `\.` is used in the last part of the regular expression to match a literal dot character in the TLD (top level domain).
+Both character escapes are used inside square brackets ([ ]) to create character classes that match specific sets of characters. \d is used in the character class [\da-z\.-] to match digits, and `\.` is used in the last part of the regular expression to match a literal dot character in the TLD (top level domain).
 
-In addition,there is also a backslash escape `(\)` before the hyphen character (-) in the first two character classes: [a-z0-9_\.-] and [\da-z\.-]. This is because the hyphen character has a special meaning inside square brackets, where it is used to define a range of characters. In our examples above in 'a-z' it can be spoken as "a to z"; however, the hyphen after the escape refers to the literal character.  Therfore, it is treated as a literal character and included in the character class.
+In addition,there is also a backslash escape `(\)` before the hyphen character (-) in the first two character classes: [a-z0-9_\.-] and [\da-z\.-]. This is because the hyphen character has a special meaning inside square brackets, where it is used to define a range of characters. In our examples above, 'a-z' can be spoken as "a to z"; however, the hyphen after the escape refers to the literal dash - character.  Therfore, it is treated as a literal character and included in the character class.
 ## Author
 
 
-After running an E-Commerce tire store for ten year
+With a distinguished career in Sales and Management and an known talent for computers, I was asked to lead my company's new online department.  After a long online career where I learned a lot about Ecommerce and ux, I have now embarked on journey to get on the make the applications and websites people use.  Visit my repo on Github at [dirtydenny](https://github.com/dirtydenny/).  If you’d like to add to this repo or please contact me directly at dallen7@socal.rr.com.
