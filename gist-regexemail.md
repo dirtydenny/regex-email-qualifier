@@ -20,11 +20,11 @@ Let's take a quick look at the code and begin to unpack it.
 
 Let's see it inserted into a some JavaScript.
 
->function validateEmail(email)<br>
->{<br>
->const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;<br>
->return regex.test(email);<br>
->}<br>
+>function validateEmail(email)
+>{
+>const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+>return regex.test(email);
+>}
 
 This function will return either a TRUE or FALSE after it uses the TEST method to examine the pattern of the email inputted by the user.
 
